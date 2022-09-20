@@ -18,6 +18,10 @@ function titleCase(string) {
 }
 
 
+function ODEV(number) {
+  let stuff = 0;
+  String(number).split('').map(number => stuff += Number(number));
+  return stuff % 2 === 0 ? 'oddish' : 'evenish';
+}
 
-
-module.exports = { reverseSentence, addPunctuation, titleCase };
+module.exports = { reverseSentence, addPunctuation, titleCase, ODEV };

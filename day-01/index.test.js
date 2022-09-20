@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation, titleCase } = require('./index.js');
+const { reverseSentence, addPunctuation, titleCase, ODEV } = require('./index.js');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -24,7 +24,11 @@ it('title case', () => {
 });
 
 
-
+it('oddish or evenish', () => {
+  expect(ODEV('234')).toEqual('evenish');
+  expect(ODEV('345')).toEqual('oddish');
+  expect(ODEV('789')).toEqual('oddish');
+});
 
 
 
