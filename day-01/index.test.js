@@ -5,11 +5,12 @@ const {
   ODEV, 
   at, 
   grams, 
-  fizzBuzz } = require('./index.js');
+  fizzBuzz,
+  multiples } = require('./index.js');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
-    it('should reverse a sentence', () => {
+    it.skip('should reverse a sentence', () => {
       const output = reverseSentence('alchemy rocks gold');
       expect(output).toEqual('ymehcla skcor dlog');
     });
@@ -17,7 +18,7 @@ describe('primitive code challenges', () => {
   });
 });
 
-it('add punctuation', () => {
+it.skip('add punctuation', () => {
   const addE = addPunctuation('!!');
   const addQ = addPunctuation('?');
   const stop = addE('stop');
@@ -26,24 +27,24 @@ it('add punctuation', () => {
 });
 
 
-it('title case', () => {
+it.skip('title case', () => {
   expect(titleCase('stop on the ground')).toEqual('Stop On The Ground');
 });
 
 
-it('oddish or evenish', () => {
+it.skip('oddish or evenish', () => {
   expect(ODEV('234')).toEqual('evenish');
   expect(ODEV('345')).toEqual('oddish');
   expect(ODEV('789')).toEqual('oddish');
 });
 
-it('find array', () => {
+it.skip('find array', () => {
   const arr = [1, 2, 3, 4];
   expect(at(arr, 2)).toEqual(3);
   expect(at(arr, -1)).toEqual(4);
 });
 
-it('anagrams', () => {
+it.skip('anagrams', () => {
   const wordOne = 'water';
   const wordTwo = 'wet';
   const one = 'fire';
@@ -52,7 +53,7 @@ it('anagrams', () => {
   expect(grams(one, two)).toEqual(false);
 });
 
-it('FizzBuzz', () => {
+it.skip('FizzBuzz', () => {
   const array = [
     1, 2, 
     'fizz',
@@ -71,6 +72,13 @@ it('FizzBuzz', () => {
   ];
   expect(fizzBuzz(15)).toEqual(array);
 });
+
+it.skip('multiples', () => {
+  expect(multiples(5)).toEqual([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
+  expect(multiples(25)).toEqual([25, 50]);
+});
+
+
 
 
 

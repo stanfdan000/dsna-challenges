@@ -50,6 +50,20 @@ function fizzBuzz(num) {
   return array;
 }
 
+
+function multiples(n) {
+  const array = [];
+  if (n >= 50) return array;
+  for (let i = 1; i <= 50; i++) {
+    if (i % n === 0) array.push(i);
+  }
+  return array;
+}
+
+
+
+
+
 module.exports = { 
   reverseSentence, 
   addPunctuation, 
@@ -57,4 +71,5 @@ module.exports = {
   ODEV, 
   at, 
   grams, 
-  fizzBuzz };
+  fizzBuzz,
+  multiples };
