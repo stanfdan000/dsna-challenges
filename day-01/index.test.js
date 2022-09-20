@@ -6,7 +6,8 @@ const {
   at, 
   grams, 
   fizzBuzz,
-  multiples } = require('./index.js');
+  multiples,
+  RD } = require('./index.js');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -78,7 +79,11 @@ it.skip('multiples', () => {
   expect(multiples(25)).toEqual([25, 50]);
 });
 
-
+it('rootDigit', () => {
+  expect(RD(123)).toEqual(6);
+  expect(RD(4322)).toEqual(2);
+  expect(RD(999888777)).toEqual(9);
+});
 
 
 

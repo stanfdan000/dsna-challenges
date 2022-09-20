@@ -61,7 +61,12 @@ function multiples(n) {
 }
 
 
-
+function RD(n) {
+  const D = n.toString().split('');
+  const num = D.map(d => + d);
+  const sum = num.reduce((a, b) => a + b);
+  return String(sum).split('').length === 1 ? sum : RD(sum);
+}
 
 
 module.exports = { 
@@ -72,4 +77,5 @@ module.exports = {
   at, 
   grams, 
   fizzBuzz,
-  multiples };
+  multiples,
+  RD };
