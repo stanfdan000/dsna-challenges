@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation } = require('./index.js');
+const { reverseSentence, addPunctuation, titleCase } = require('./index.js');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -19,7 +19,9 @@ it('add punctuation', () => {
 });
 
 
-
+it('title case', () => {
+  expect(titleCase('stop on the ground')).toEqual('Stop On The Ground');
+});
 
 
 
