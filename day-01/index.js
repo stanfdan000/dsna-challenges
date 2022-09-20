@@ -36,4 +36,25 @@ function grams(string1, string2) {
   return fire.map(letter => water.includes(letter)).includes(true) ? true : false;
 }
 
-module.exports = { reverseSentence, addPunctuation, titleCase, ODEV, at, grams };
+function fizzBuzz(num) {
+  const array = [];
+  for (let i = 1; i <= num; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      array.push ('fizzBuzz');
+    } else if (i % 3 === 0) {
+      array.push('fizz');
+    } else if (i % 5 === 0) {
+      array.push('buzz');
+    } else array.push(i);
+  }
+  return array;
+}
+
+module.exports = { 
+  reverseSentence, 
+  addPunctuation, 
+  titleCase, 
+  ODEV, 
+  at, 
+  grams, 
+  fizzBuzz };
