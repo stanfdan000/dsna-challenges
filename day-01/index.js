@@ -24,4 +24,10 @@ function ODEV(number) {
   return stuff % 2 === 0 ? 'oddish' : 'evenish';
 }
 
-module.exports = { reverseSentence, addPunctuation, titleCase, ODEV };
+
+function at(arr, i) {
+  return i >= 0 ? arr[i] : arr[arr.length + i];
+}
+
+
+module.exports = { reverseSentence, addPunctuation, titleCase, ODEV, at };

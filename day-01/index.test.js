@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation, titleCase, ODEV } = require('./index.js');
+const { reverseSentence, addPunctuation, titleCase, ODEV, at } = require('./index.js');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -28,6 +28,12 @@ it('oddish or evenish', () => {
   expect(ODEV('234')).toEqual('evenish');
   expect(ODEV('345')).toEqual('oddish');
   expect(ODEV('789')).toEqual('oddish');
+});
+
+it('find array', () => {
+  const arr = [1, 2, 3, 4];
+  expect(at(arr, 2)).toEqual(3);
+  expect(at(arr, -1)).toEqual(4);
 });
 
 
