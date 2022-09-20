@@ -1,4 +1,4 @@
-const { reverseSentence, addPunctuation, titleCase, ODEV, at } = require('./index.js');
+const { reverseSentence, addPunctuation, titleCase, ODEV, at, grams } = require('./index.js');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
@@ -34,6 +34,15 @@ it('find array', () => {
   const arr = [1, 2, 3, 4];
   expect(at(arr, 2)).toEqual(3);
   expect(at(arr, -1)).toEqual(4);
+});
+
+it('anagrams', () => {
+  const wordOne = 'water';
+  const wordTwo = 'wet';
+  const one = 'fire';
+  const two = 'hot';
+  expect(grams(wordOne, wordTwo)).toEqual(true);
+  expect(grams(one, two)).toEqual(false);
 });
 
 

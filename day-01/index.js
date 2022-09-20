@@ -30,4 +30,10 @@ function at(arr, i) {
 }
 
 
-module.exports = { reverseSentence, addPunctuation, titleCase, ODEV, at };
+function grams(string1, string2) {
+  const fire = string1.split('');
+  const water = string2.split('');
+  return fire.map(letter => water.includes(letter)).includes(true) ? true : false;
+}
+
+module.exports = { reverseSentence, addPunctuation, titleCase, ODEV, at, grams };
