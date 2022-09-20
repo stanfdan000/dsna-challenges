@@ -1,9 +1,31 @@
-const { reverseSentence } = require('./index');
+const reverseSentence = require('./index.js');
 
 describe('primitive code challenges', () => {
   describe('reverseSentence', () => {
+
     it('should reverse a sentence', () => {
-      expect(reverseSentence('alchemy rocks gold')).toBe('ymehcla skcor dlog');
+      const output = reverseSentence('alchemy rocks gold');
+      expect(output).toEqual('ymehcla skcor dlog');
     });
+
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
